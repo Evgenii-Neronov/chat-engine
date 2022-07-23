@@ -1,0 +1,16 @@
+{
+  "name": "chatwebclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "jquery": "^2.2.0",
+    "toastr": "^2.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "E.Neronov",
+  "license": "ISC"
+}

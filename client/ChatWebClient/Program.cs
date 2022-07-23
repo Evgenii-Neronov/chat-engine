@@ -5,6 +5,13 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+    RequestPath = new PathString("/vendor")
+});
+
+
 app.UseFileServer(new FileServerOptions
 {
     FileProvider = new PhysicalFileProvider(
@@ -21,5 +28,6 @@ app.UseRouter(routeBuilder =>
         return Task.FromResult(0);
     });
 });
+
 
 app.Run();
